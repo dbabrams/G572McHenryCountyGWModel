@@ -12,8 +12,8 @@ import numpy as np
 # In[2]:
 
 
-top_raw = pd.read_csv(r'C:\Users\Annie\Desktop\UIUC\Spring 2022\Hydro w python\top_elevation.csv')
-bottoms_raw = pd.read_csv(r'C:\Users\Annie\Desktop\UIUC\Spring 2022\Hydro w python\bottom_elevations.csv')
+top_raw = pd.read_csv(r'https://github.com/dbabrams/G572McHenryCountyGWModel/blob/develop_annie/top_elevation.csv')
+bottoms_raw = pd.read_csv(r'https://github.com/dbabrams/G572McHenryCountyGWModel/blob/develop_annie/bottom_elevations.csv')
 
 
 # In[73]:

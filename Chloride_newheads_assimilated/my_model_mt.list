@@ -303,23 +303,23 @@
 
 
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   1 IN FLOW TIME STEP   1 STRESS PERIOD   1
-    11 TOTAL ITERATIONS
+    15 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   2 IN FLOW TIME STEP   1 STRESS PERIOD   1
      9 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   3 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     9 TOTAL ITERATIONS
+    10 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   4 IN FLOW TIME STEP   1 STRESS PERIOD   1
      8 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   5 IN FLOW TIME STEP   1 STRESS PERIOD   1
      8 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   6 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   7 IN FLOW TIME STEP   1 STRESS PERIOD   1
      8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   8 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     5 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   9 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   7 IN FLOW TIME STEP   1 STRESS PERIOD   1
      6 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   8 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     7 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   9 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     7 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  10 IN FLOW TIME STEP   1 STRESS PERIOD   1
      8 TOTAL ITERATIONS
 
@@ -342,36 +342,36 @@
                                                       ----------------             ----------------
                                CONSTANT CONCENTRATION:    0.000000                    0.000000    
                                         CONSTANT HEAD:    0.000000                    0.000000    
-                                                WELLS:    0.000000                  -0.4330095E+10
-                                               DRAINS:    0.000000                  -0.1196778E+10
-                                               RIVERS:    0.000000                  -0.3178871E+11
-                                             RECHARGE:   0.1750064E+12                0.000000    
-                                MASS STORAGE (SOLUTE):    19.18628                  -0.1376613E+12
+                                                WELLS:    0.000000                  -0.2761015E+12
+                                               DRAINS:    0.000000                  -0.1131036E+12
+                                               RIVERS:    0.000000                  -0.1233864E+13
+                                             RECHARGE:   0.8167228E+13                0.000000    
+                                MASS STORAGE (SOLUTE):    204536.5                  -0.6543131E+13
                             ---------------------------------------------------------------------------
-                                              [TOTAL]:   0.1750064E+12 KG           -0.1749768E+12 KG  
+                                              [TOTAL]:   0.8167228E+13 KG           -0.8166200E+13 KG  
 
-                                                          NET (IN - OUT):   0.2958950E+08
-                                                   DISCREPANCY (PERCENT):   0.1690910E-01
+                                                          NET (IN - OUT):   0.1028129E+10
+                                                   DISCREPANCY (PERCENT):   0.1258926E-01
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  11 IN FLOW TIME STEP   1 STRESS PERIOD   1
      7 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  12 IN FLOW TIME STEP   1 STRESS PERIOD   1
      7 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  13 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     8 TOTAL ITERATIONS
+     7 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  14 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     8 TOTAL ITERATIONS
+     7 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  15 IN FLOW TIME STEP   1 STRESS PERIOD   1
      8 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  16 IN FLOW TIME STEP   1 STRESS PERIOD   1
      8 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  17 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     7 TOTAL ITERATIONS
+     6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  18 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     8 TOTAL ITERATIONS
+     7 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  19 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     7 TOTAL ITERATIONS
+     8 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  20 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     7 TOTAL ITERATIONS
+     9 TOTAL ITERATIONS
 
 
 
@@ -392,16 +392,16 @@
                                                       ----------------             ----------------
                                CONSTANT CONCENTRATION:    0.000000                    0.000000    
                                         CONSTANT HEAD:    0.000000                    0.000000    
-                                                WELLS:    0.000000                  -0.1272808E+11
-                                               DRAINS:    0.000000                  -0.3342761E+10
-                                               RIVERS:    0.000000                  -0.8842937E+11
-                                             RECHARGE:   0.3500128E+12                0.000000    
-                                MASS STORAGE (SOLUTE):    46.30322                  -0.2454390E+12
+                                                WELLS:    0.000000                  -0.7890093E+12
+                                               DRAINS:    0.000000                  -0.2722193E+12
+                                               RIVERS:    0.000000                  -0.3510212E+13
+                                             RECHARGE:   0.1633446E+14                0.000000    
+                                MASS STORAGE (SOLUTE):    258466.6                  -0.1176144E+14
                             ---------------------------------------------------------------------------
-                                              [TOTAL]:   0.3500128E+12 KG           -0.3499392E+12 KG  
+                                              [TOTAL]:   0.1633446E+14 KG           -0.1633288E+14 KG  
 
-                                                          NET (IN - OUT):   0.7353139E+08
-                                                   DISCREPANCY (PERCENT):   0.2101041E-01
+                                                          NET (IN - OUT):   0.1581253E+10
+                                                   DISCREPANCY (PERCENT):   0.9680939E-02
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  21 IN FLOW TIME STEP   1 STRESS PERIOD   1
      6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  22 IN FLOW TIME STEP   1 STRESS PERIOD   1
@@ -442,16 +442,16 @@
                                                       ----------------             ----------------
                                CONSTANT CONCENTRATION:    0.000000                    0.000000    
                                         CONSTANT HEAD:    0.000000                    0.000000    
-                                                WELLS:    0.000000                  -0.2377395E+11
-                                               DRAINS:    0.000000                  -0.6353989E+10
-                                               RIVERS:    0.000000                  -0.1624731E+12
-                                             RECHARGE:   0.5250191E+12                0.000000    
-                                MASS STORAGE (SOLUTE):    118.9587                  -0.3323182E+12
+                                                WELLS:    0.000000                  -0.1444107E+13
+                                               DRAINS:    0.000000                  -0.4707386E+12
+                                               RIVERS:    0.000000                  -0.6510595E+13
+                                             RECHARGE:   0.2450169E+14                0.000000    
+                                MASS STORAGE (SOLUTE):    277892.3                  -0.1607404E+14
                             ---------------------------------------------------------------------------
-                                              [TOTAL]:   0.5250191E+12 KG           -0.5249192E+12 KG  
+                                              [TOTAL]:   0.2450169E+14 KG           -0.2449948E+14 KG  
 
-                                                          NET (IN - OUT):   0.9987686E+08
-                                                   DISCREPANCY (PERCENT):   0.1902528E-01
+                                                          NET (IN - OUT):   0.2212495E+10
+                                                   DISCREPANCY (PERCENT):   0.9030377E-02
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  31 IN FLOW TIME STEP   1 STRESS PERIOD   1
      6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  32 IN FLOW TIME STEP   1 STRESS PERIOD   1
@@ -465,7 +465,7 @@
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  36 IN FLOW TIME STEP   1 STRESS PERIOD   1
      6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  37 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     3 TOTAL ITERATIONS
+     6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  38 IN FLOW TIME STEP   1 STRESS PERIOD   1
      6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  39 IN FLOW TIME STEP   1 STRESS PERIOD   1
@@ -492,22 +492,22 @@
                                                       ----------------             ----------------
                                CONSTANT CONCENTRATION:    0.000000                    0.000000    
                                         CONSTANT HEAD:    0.000000                    0.000000    
-                                                WELLS:    0.000000                  -0.3660225E+11
-                                               DRAINS:    0.000000                  -0.1019605E+11
-                                               RIVERS:    0.000000                  -0.2486065E+12
-                                             RECHARGE:   0.7000257E+12                0.000000    
-                                MASS STORAGE (SOLUTE):    208.2694                  -0.4045087E+12
+                                                WELLS:    0.000000                  -0.2191897E+13
+                                               DRAINS:    0.000000                  -0.7085813E+12
+                                               RIVERS:    0.000000                  -0.1001338E+14
+                                             RECHARGE:   0.3266892E+14                0.000000    
+                                MASS STORAGE (SOLUTE):    294876.1                  -0.1975217E+14
                             ---------------------------------------------------------------------------
-                                              [TOTAL]:   0.7000257E+12 KG           -0.6999135E+12 KG  
+                                              [TOTAL]:   0.3266892E+14 KG           -0.3266603E+14 KG  
 
-                                                          NET (IN - OUT):   0.1122632E+09
-                                                   DISCREPANCY (PERCENT):   0.1603829E-01
+                                                          NET (IN - OUT):   0.2891973E+10
+                                                   DISCREPANCY (PERCENT):   0.8852758E-02
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  41 IN FLOW TIME STEP   1 STRESS PERIOD   1
      6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  42 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     6 TOTAL ITERATIONS
+     3 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  43 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     6 TOTAL ITERATIONS
+     3 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  44 IN FLOW TIME STEP   1 STRESS PERIOD   1
      6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  45 IN FLOW TIME STEP   1 STRESS PERIOD   1
@@ -515,9 +515,9 @@
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  46 IN FLOW TIME STEP   1 STRESS PERIOD   1
      6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  47 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     7 TOTAL ITERATIONS
+     6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  48 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     5 TOTAL ITERATIONS
+     6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  49 IN FLOW TIME STEP   1 STRESS PERIOD   1
      6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  50 IN FLOW TIME STEP   1 STRESS PERIOD   1
@@ -542,36 +542,36 @@
                                                       ----------------             ----------------
                                CONSTANT CONCENTRATION:    0.000000                    0.000000    
                                         CONSTANT HEAD:    0.000000                    0.000000    
-                                                WELLS:    0.000000                  -0.5070004E+11
-                                               DRAINS:    0.000000                  -0.1479680E+11
-                                               RIVERS:    0.000000                  -0.3434419E+12
-                                             RECHARGE:   0.8750324E+12                0.000000    
-                                MASS STORAGE (SOLUTE):    310.3118                  -0.4659708E+12
+                                                WELLS:    0.000000                  -0.3005717E+13
+                                               DRAINS:    0.000000                  -0.9834556E+12
+                                               RIVERS:    0.000000                  -0.1388098E+14
+                                             RECHARGE:   0.4083615E+14                0.000000    
+                                MASS STORAGE (SOLUTE):    318271.6                  -0.2296256E+14
                             ---------------------------------------------------------------------------
-                                              [TOTAL]:   0.8750324E+12 KG           -0.8749095E+12 KG  
+                                              [TOTAL]:   0.4083615E+14 KG           -0.4083272E+14 KG  
 
-                                                          NET (IN - OUT):   0.1228800E+09
-                                                   DISCREPANCY (PERCENT):   0.1404389E-01
+                                                          NET (IN - OUT):   0.3439329E+10
+                                                   DISCREPANCY (PERCENT):   0.8422620E-02
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  51 IN FLOW TIME STEP   1 STRESS PERIOD   1
      6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  52 IN FLOW TIME STEP   1 STRESS PERIOD   1
      6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  53 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     7 TOTAL ITERATIONS
+     6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  54 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     7 TOTAL ITERATIONS
+     6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  55 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     7 TOTAL ITERATIONS
+     6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  56 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     7 TOTAL ITERATIONS
+     6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  57 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     7 TOTAL ITERATIONS
+     6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  58 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     7 TOTAL ITERATIONS
+     6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  59 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     7 TOTAL ITERATIONS
+     6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  60 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     7 TOTAL ITERATIONS
+     6 TOTAL ITERATIONS
 
 
 
@@ -592,41 +592,40 @@
                                                       ----------------             ----------------
                                CONSTANT CONCENTRATION:    0.000000                    0.000000    
                                         CONSTANT HEAD:    0.000000                    0.000000    
-                                                WELLS:    0.000000                  -0.6572319E+11
-                                               DRAINS:    0.000000                  -0.2005996E+11
-                                               RIVERS:    0.000000                  -0.4446798E+12
-                                             RECHARGE:   0.1050039E+13                0.000000    
-                                MASS STORAGE (SOLUTE):    449.3540                  -0.5194465E+12
+                                                WELLS:    0.000000                  -0.3867901E+13
+                                               DRAINS:    0.000000                  -0.1291581E+13
+                                               RIVERS:    0.000000                  -0.1801965E+14
+                                             RECHARGE:   0.4900339E+14                0.000000    
+                                MASS STORAGE (SOLUTE):    348534.4                  -0.2582085E+14
                             ---------------------------------------------------------------------------
-                                              [TOTAL]:   0.1050039E+13 KG           -0.1049910E+13 KG  
+                                              [TOTAL]:   0.4900339E+14 KG           -0.4899999E+14 KG  
 
-                                                          NET (IN - OUT):   0.1295647E+09
-                                                   DISCREPANCY (PERCENT):   0.1233980E-01
+                                                          NET (IN - OUT):   0.3397386E+10
+                                                   DISCREPANCY (PERCENT):   0.6933203E-02
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  61 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     7 TOTAL ITERATIONS
+     8 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  62 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     7 TOTAL ITERATIONS
+     8 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  63 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     7 TOTAL ITERATIONS
+     8 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  64 IN FLOW TIME STEP   1 STRESS PERIOD   1
      7 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  65 IN FLOW TIME STEP   1 STRESS PERIOD   1
      7 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  66 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     7 TOTAL ITERATIONS
+     6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  67 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     7 TOTAL ITERATIONS
+     6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  68 IN FLOW TIME STEP   1 STRESS PERIOD   1
      6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  69 IN FLOW TIME STEP   1 STRESS PERIOD   1
      6 TOTAL ITERATIONS
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  70 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     6 TOTAL ITERATIONS
+     5 TOTAL ITERATIONS
   MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
   MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
  ------------------------------------------------------------------------------------------------------------------------------------
-   0.8038E-02 (  4,205,211)  0.3733E-03 (  4, 35,165)  0.4203E-03 (  1,106,149)  0.5841E-04 (  4, 35,165)  0.1284E-04 (  4, 35,165)
-   0.9805E-05 (  1,106,149)
+   0.8037E-02 (  4,205,211)  0.3441E-03 (  1,106,149)  0.2763E-03 (  1,106,149)  0.5041E-04 (  1,106,149)  0.9999E-05 (  1,106,149)
 
 
 
@@ -647,16 +646,16 @@
                                                       ----------------             ----------------
                                CONSTANT CONCENTRATION:    0.000000                    0.000000    
                                         CONSTANT HEAD:    0.000000                    0.000000    
-                                                WELLS:    0.000000                  -0.8142148E+11
-                                               DRAINS:    0.000000                  -0.2588397E+11
-                                               RIVERS:    0.000000                  -0.5507207E+12
-                                             RECHARGE:   0.1225045E+13                0.000000    
-                                MASS STORAGE (SOLUTE):    623.4980                  -0.5668875E+12
+                                                WELLS:    0.000000                  -0.4765580E+13
+                                               DRAINS:    0.000000                  -0.1628944E+13
+                                               RIVERS:    0.000000                  -0.2236525E+14
+                                             RECHARGE:   0.5717062E+14                0.000000    
+                                MASS STORAGE (SOLUTE):    367661.7                  -0.2840818E+14
                             ---------------------------------------------------------------------------
-                                              [TOTAL]:   0.1225045E+13 KG           -0.1224914E+13 KG  
+                                              [TOTAL]:   0.5717062E+14 KG           -0.5716795E+14 KG  
 
-                                                          NET (IN - OUT):   0.1315963E+09
-                                                   DISCREPANCY (PERCENT):   0.1074273E-01
+                                                          NET (IN - OUT):   0.2667577E+10
+                                                   DISCREPANCY (PERCENT):   0.4666102E-02
   ----- 
  | M T |
  | 3 D | END OF MODEL OUTPUT

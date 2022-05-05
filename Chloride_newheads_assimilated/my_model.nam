@@ -13,3 +13,4 @@ PCG               27  my_model.pcg
 LMT6              30  my_model.lmt6
 DATA(BINARY)       1  my_model.cbc REPLACE
 DATA(BINARY)      51  my_model.hds REPLACE
+DATA(BINARY)      52  my_model.ddn REPLACE

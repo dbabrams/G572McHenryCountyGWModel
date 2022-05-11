@@ -33,7 +33,7 @@
  | 3 D | ##                                                                              
   ----- 
  THE TRANSPORT MODEL CONSISTS OF    10 LAYER(S)  205 ROW(S)  225 COLUMN(S)
- NUMBER OF STRESS PERIOD(S) FOR TRANSPORT SIMULATION =   11
+ NUMBER OF STRESS PERIOD(S) FOR TRANSPORT SIMULATION =    1
  NUMBER OF ALL COMPONENTS INCLUDED IN SIMULATION =    1
  NUMBER OF MOBILE COMPONENTS INCLUDED IN SIMULATION =    1
  UNIT FOR TIME IS D   ;  UNIT FOR LENGTH IS M   ;  UNIT FOR MASS IS KG  
@@ -48,7 +48,7 @@
      461260 ELEMENTS OF THE IX ARRAY USED BY THE BTN PACKAGE
 
  FMI5 -- FLOW MODEL INTERFACE PACKAGE, VERSION 5, FEBRUARY 2010, INPUT READ FROM UNIT 10
- FLOW MODEL IS TRANSIENT
+ FLOW MODEL IS STEADY-STATE
 
  ADV5 -- ADVECTION PACKAGE, VERSION 5, FEBRUARY 2010, INPUT READ FROM UNIT 32
  ADVECTION IS SOLVED WITH THE UPSTREAM FINITE DIFFERENCE SCHEME
@@ -132,16 +132,16 @@
 
                      CELL THICKNESS (DZ)      FOR LAYER 10 READ ON UNIT 31 USING FORMAT: "         (225E15.6) "
                      ------------------------------------------------------------------------------------------
-                                       POROSITY                 =  0.3000000     FOR LAYER  1
-                                       POROSITY                 =  0.3000000     FOR LAYER  2
-                                       POROSITY                 =  0.3000000     FOR LAYER  3
-                                       POROSITY                 =  0.3000000     FOR LAYER  4
-                                       POROSITY                 =  0.3000000     FOR LAYER  5
-                                       POROSITY                 =  0.3000000     FOR LAYER  6
-                                       POROSITY                 =  0.3000000     FOR LAYER  7
-                                       POROSITY                 =  0.3000000     FOR LAYER  8
-                                       POROSITY                 =  0.3000000     FOR LAYER  9
-                                       POROSITY                 =  0.3000000     FOR LAYER 10
+                                       POROSITY                 =  0.2500000     FOR LAYER  1
+                                       POROSITY                 =  0.2500000     FOR LAYER  2
+                                       POROSITY                 =  0.2500000     FOR LAYER  3
+                                       POROSITY                 =  0.2500000     FOR LAYER  4
+                                       POROSITY                 =  0.2500000     FOR LAYER  5
+                                       POROSITY                 =  0.2500000     FOR LAYER  6
+                                       POROSITY                 =  0.2500000     FOR LAYER  7
+                                       POROSITY                 =  0.2500000     FOR LAYER  8
+                                       POROSITY                 =  0.2500000     FOR LAYER  9
+                                       POROSITY                 =  0.2500000     FOR LAYER 10
                                        CONCN. BOUNDARY ARRAY    =              1 FOR LAYER  1
                                        CONCN. BOUNDARY ARRAY    =              1 FOR LAYER  2
                                        CONCN. BOUNDARY ARRAY    =              1 FOR LAYER  3
@@ -177,7 +177,9 @@
  SAVE DISSOLVED PHASE CONCENTRATIONS IN UNFORMATTED FILES [MT3Dnnn.UCN]
   FOR EACH SPECIES ON UNITS 201 AND ABOVE
 
- NUMBER OF TIMES AT WHICH SIMULATION RESULTS ARE SAVED =    0
+ NUMBER OF TIMES AT WHICH SIMULATION RESULTS ARE SAVED =    7
+ TOTAL ELAPSED TIMES AT WHICH SIMULATION RESULTS ARE SAVED: 
+    3650.0       7300.0       10950.       14600.       18250.       21900.       25550.    
 
  NUMBER OF OBSERVATION POINTS =    0
 
@@ -230,7 +232,7 @@
                                    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
- LENGTH OF CURRENT STRESS PERIOD =   1.000000    
+ LENGTH OF CURRENT STRESS PERIOD =   25550.00    
  NUMBER OF TIME STEPS FOR CURRENT STRESS PERIOD =    1
  TIME STEP MULTIPLIER USED IN FLOW SOLUTION =   1.000000    
 
@@ -253,7 +255,7 @@
                                                          TIME STEP NO.  001
                                           ================================================
 
- FROM TIME =   0.0000     TO    1.0000    
+ FROM TIME =   0.0000     TO    25550.    
 
 
                     "THKSAT          " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  1 READ UNFORMATTED ON UNIT 10
@@ -268,15 +270,12 @@
                     "QZZ             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  1 READ UNFORMATTED ON UNIT 10
                     --------------------------------------------------------------------------------------------
 
-                    "STO             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  1 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
  MAXIMUM STEPSIZE DURING WHICH ANY PARTICLE CANNOT MOVE MORE THAN ONE CELL
- =  1.332    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
+ =  1.093    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
 
  MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE ADVECTION TERM
  (FOR PURE FINITE-DIFFERENCE OPTION, MIXELM=0) 
- =  1.299    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
+ =  1.075    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
 
                     "CNH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  1 READ UNFORMATTED ON UNIT 10
                     --------------------------------------------------------------------------------------------
@@ -297,287 +296,282 @@
  TOTAL NUMBER OF POINT SOURCES/SINKS PRESENT IN THE FLOW MODEL = 17060
 
  MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE SINK & SOURCE TERM
- =  1.305    (WHEN MIN. R.F.=1)  AT K=   1, I= 138, J= 219
+ =  1.087    (WHEN MIN. R.F.=1)  AT K=   1, I= 151, J= 199
 
  MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE DISPERSION TERM
- =  65.79    (WHEN MIN. R.F.=1)  AT K=   1, I= 179, J= 136
+ =  54.21    (WHEN MIN. R.F.=1)  AT K=   1, I= 179, J= 136
 
 
      1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   1 IN FLOW TIME STEP   1 STRESS PERIOD   1
-     3 TOTAL ITERATIONS
-  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
-  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
- ------------------------------------------------------------------------------------------------------------------------------------
-   0.8306     (  1, 62,225)  0.2246E-02 (  1,180,197)  0.3636E-05 (  1,180,197)
-
-
-
- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FOR COMPONENT NO. 01<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-
-                                            -------------------------------------------
-                                                      TRANSPORT STEP NO.    1
-                                            -------------------------------------------
-
- TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   1.000000    D   
- .....................................................................
-
-                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP    1, TIME STEP    1, STRESS PERIOD    1
-                     ------------------------------------------------------------------------------------------
-
-                                                             IN                           OUT
-                                                      ----------------             ----------------
-                               CONSTANT CONCENTRATION:    0.000000                    0.000000    
-                                        CONSTANT HEAD:    0.000000                    0.000000    
-                                                WELLS:    0.000000                   -1368237.    
-                                               DRAINS:    0.000000                   -720331.2    
-                                               RIVERS:    0.000000                   -6320550.    
-                                             RECHARGE:   0.1513749E+10                0.000000    
-                                MASS STORAGE (SOLUTE):    0.000000                  -0.1504533E+10
-                            ---------------------------------------------------------------------------
-                                              [TOTAL]:   0.1513749E+10 KG           -0.1512942E+10 KG  
-
-                                                          NET (IN - OUT):    806528.0    
-                                                   DISCREPANCY (PERCENT):   0.5329438E-01
-
-
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                                                       STRESS PERIOD NO.  002
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
- LENGTH OF CURRENT STRESS PERIOD =   3650.000    
- NUMBER OF TIME STEPS FOR CURRENT STRESS PERIOD =    1
- TIME STEP MULTIPLIER USED IN FLOW SOLUTION =   1.000000    
-
- ***Type of Transport Simulation is TRANSIENT
-
- USER-SPECIFIED TRANSPORT STEPSIZE =   365.0000    D   
- MAXIMUM NUMBER OF TRANSPORT STEPS ALLOWED  IN ONE FLOW TIME STEP =     50000
- MULTIPLIER FOR SUCCESSIVE TRANSPORT STEPS  [USED IN IMPLICIT SCHEMES] =     1.000
- MAXIMUM TRANSPORT STEP SIZE  [USED IN IMPLICIT SCHEMES] =   365.0000    D   
-
- CONCENTRATION OF RECHARGE FLUXES WILL BE READ IN STRESS PERIOD  2
-
-                           RECH. CONC. COMP.  01    READ ON UNIT 34 USING FORMAT: "         (225E15.6) "
-                           -----------------------------------------------------------------------------
-
- NO. OF POINT SINKS/SOURCES OF SPECIFIED CONCONCENTRATIONS =    0 IN STRESS PERIOD  2
-
-
-                                          ================================================
-                                                         TIME STEP NO.  001
-                                          ================================================
-
- FROM TIME =   1.0000     TO    3651.0    
-
-
-                    "THKSAT          " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  2 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QXX             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  2 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QYY             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  2 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QZZ             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  2 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "STO             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  2 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
- MAXIMUM STEPSIZE DURING WHICH ANY PARTICLE CANNOT MOVE MORE THAN ONE CELL
- =  1.332    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE ADVECTION TERM
- (FOR PURE FINITE-DIFFERENCE OPTION, MIXELM=0) 
- =  1.299    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
-                    "CNH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  2 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "WEL             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  2 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "DRN             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  2 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RCH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  2 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RIV             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  2 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-
- TOTAL NUMBER OF POINT SOURCES/SINKS PRESENT IN THE FLOW MODEL = 17060
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE SINK & SOURCE TERM
- =  1.305    (WHEN MIN. R.F.=1)  AT K=   1, I= 138, J= 219
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE DISPERSION TERM
- =  65.79    (WHEN MIN. R.F.=1)  AT K=   1, I= 179, J= 136
-
-
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   1 IN FLOW TIME STEP   1 STRESS PERIOD   2
-    15 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   2 IN FLOW TIME STEP   1 STRESS PERIOD   2
-    10 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   3 IN FLOW TIME STEP   1 STRESS PERIOD   2
-    10 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   4 IN FLOW TIME STEP   1 STRESS PERIOD   2
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   5 IN FLOW TIME STEP   1 STRESS PERIOD   2
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   6 IN FLOW TIME STEP   1 STRESS PERIOD   2
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   7 IN FLOW TIME STEP   1 STRESS PERIOD   2
-     9 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   8 IN FLOW TIME STEP   1 STRESS PERIOD   2
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   9 IN FLOW TIME STEP   1 STRESS PERIOD   2
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  10 IN FLOW TIME STEP   1 STRESS PERIOD   2
-     5 TOTAL ITERATIONS
-  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
-  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
- ------------------------------------------------------------------------------------------------------------------------------------
-   0.6680E-01 (  5, 52, 16)  0.2697E-02 (  1,176,171)  0.9137E-02 (  1,176,171)  0.5336E-03 (  1,176,171)  0.1997E-05 (  3, 55, 25)
-
-
-
- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FOR COMPONENT NO. 01<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-
-                                            -------------------------------------------
-                                                      TRANSPORT STEP NO.   10
-                                            -------------------------------------------
-
- TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   3651.000    D   
- .....................................................................
-
-                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP   10, TIME STEP    1, STRESS PERIOD    2
-                     ------------------------------------------------------------------------------------------
-
-                                                             IN                           OUT
-                                                      ----------------             ----------------
-                               CONSTANT CONCENTRATION:    0.000000                    0.000000    
-                                        CONSTANT HEAD:    0.000000                    0.000000    
-                                                WELLS:    0.000000                  -0.2082820E+12
-                                               DRAINS:    0.000000                  -0.1751477E+12
-                                               RIVERS:    0.000000                  -0.8584146E+12
-                                             RECHARGE:   0.5527937E+13                0.000000    
-                                MASS STORAGE (SOLUTE):    433.9518                  -0.4281656E+13
-                            ---------------------------------------------------------------------------
-                                              [TOTAL]:   0.5527937E+13 KG           -0.5523500E+13 KG  
-
-                                                          NET (IN - OUT):   0.4437574E+10
-                                                   DISCREPANCY (PERCENT):   0.8030763E-01
-
-
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                                                       STRESS PERIOD NO.  003
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
- LENGTH OF CURRENT STRESS PERIOD =   3650.000    
- NUMBER OF TIME STEPS FOR CURRENT STRESS PERIOD =    1
- TIME STEP MULTIPLIER USED IN FLOW SOLUTION =   1.000000    
-
- ***Type of Transport Simulation is TRANSIENT
-
- USER-SPECIFIED TRANSPORT STEPSIZE =   365.0000    D   
- MAXIMUM NUMBER OF TRANSPORT STEPS ALLOWED  IN ONE FLOW TIME STEP =     50000
- MULTIPLIER FOR SUCCESSIVE TRANSPORT STEPS  [USED IN IMPLICIT SCHEMES] =     1.000
- MAXIMUM TRANSPORT STEP SIZE  [USED IN IMPLICIT SCHEMES] =   365.0000    D   
-
- CONCENTRATION OF RECHARGE FLUXES WILL BE READ IN STRESS PERIOD  3
-
-                           RECH. CONC. COMP.  01    READ ON UNIT 34 USING FORMAT: "         (225E15.6) "
-                           -----------------------------------------------------------------------------
-
- NO. OF POINT SINKS/SOURCES OF SPECIFIED CONCONCENTRATIONS =    0 IN STRESS PERIOD  3
-
-
-                                          ================================================
-                                                         TIME STEP NO.  001
-                                          ================================================
-
- FROM TIME =   3651.0     TO    7301.0    
-
-
-                    "THKSAT          " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  3 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QXX             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  3 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QYY             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  3 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QZZ             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  3 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "STO             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  3 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
- MAXIMUM STEPSIZE DURING WHICH ANY PARTICLE CANNOT MOVE MORE THAN ONE CELL
- =  1.332    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE ADVECTION TERM
- (FOR PURE FINITE-DIFFERENCE OPTION, MIXELM=0) 
- =  1.299    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
-                    "CNH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  3 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "WEL             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  3 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "DRN             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  3 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RCH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  3 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RIV             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  3 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-
- TOTAL NUMBER OF POINT SOURCES/SINKS PRESENT IN THE FLOW MODEL = 17060
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE SINK & SOURCE TERM
- =  1.305    (WHEN MIN. R.F.=1)  AT K=   1, I= 138, J= 219
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE DISPERSION TERM
- =  65.79    (WHEN MIN. R.F.=1)  AT K=   1, I= 179, J= 136
-
-
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   1 IN FLOW TIME STEP   1 STRESS PERIOD   3
+    16 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   2 IN FLOW TIME STEP   1 STRESS PERIOD   1
     11 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   2 IN FLOW TIME STEP   1 STRESS PERIOD   3
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   3 IN FLOW TIME STEP   1 STRESS PERIOD   1
     10 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   3 IN FLOW TIME STEP   1 STRESS PERIOD   3
-     9 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   4 IN FLOW TIME STEP   1 STRESS PERIOD   3
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   4 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    10 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   5 IN FLOW TIME STEP   1 STRESS PERIOD   1
      8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   5 IN FLOW TIME STEP   1 STRESS PERIOD   3
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   6 IN FLOW TIME STEP   1 STRESS PERIOD   3
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   6 IN FLOW TIME STEP   1 STRESS PERIOD   1
      9 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   7 IN FLOW TIME STEP   1 STRESS PERIOD   3
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   7 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     9 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   8 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     9 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   9 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  10 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FOR COMPONENT NO. 01<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+                                            -------------------------------------------
+                                                      TRANSPORT STEP NO.   10
+                                            -------------------------------------------
+
+ TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   3650.000    D   
+ .....................................................................
+
+                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP   10, TIME STEP    1, STRESS PERIOD    1
+                     ------------------------------------------------------------------------------------------
+
+                                                             IN                           OUT
+                                                      ----------------             ----------------
+                               CONSTANT CONCENTRATION:    0.000000                    0.000000    
+                                        CONSTANT HEAD:    0.000000                    0.000000    
+                                                WELLS:    0.000000                  -0.3211042E+12
+                                               DRAINS:    0.000000                  -0.1377042E+12
+                                               RIVERS:    0.000000                  -0.2461308E+13
+                                             RECHARGE:   0.1377044E+14                0.000000    
+                                MASS STORAGE (SOLUTE):    1972.650                  -0.1084638E+14
+                            ---------------------------------------------------------------------------
+                                              [TOTAL]:   0.1377044E+14 KG           -0.1376649E+14 KG  
+
+                                                          NET (IN - OUT):   0.3949986E+10
+                                                   DISCREPANCY (PERCENT):   0.2868863E-01
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  11 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    11 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  12 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  13 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  14 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     6 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  15 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     9 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  16 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  17 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    13 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  18 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     9 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  19 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  20 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FOR COMPONENT NO. 01<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+                                            -------------------------------------------
+                                                      TRANSPORT STEP NO.   20
+                                            -------------------------------------------
+
+ TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   7300.000    D   
+ .....................................................................
+
+                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP   20, TIME STEP    1, STRESS PERIOD    1
+                     ------------------------------------------------------------------------------------------
+
+                                                             IN                           OUT
+                                                      ----------------             ----------------
+                               CONSTANT CONCENTRATION:    0.000000                    0.000000    
+                                        CONSTANT HEAD:    0.000000                    0.000000    
+                                                WELLS:    0.000000                  -0.9653545E+12
+                                               DRAINS:    0.000000                  -0.4044133E+12
+                                               RIVERS:    0.000000                  -0.6997905E+13
+                                             RECHARGE:   0.2754089E+14                0.000000    
+                                MASS STORAGE (SOLUTE):    5303.515                  -0.1916563E+14
+                            ---------------------------------------------------------------------------
+                                              [TOTAL]:   0.2754089E+14 KG           -0.2753330E+14 KG  
+
+                                                          NET (IN - OUT):   0.7589593E+10
+                                                   DISCREPANCY (PERCENT):   0.2756134E-01
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  21 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  22 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     6 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  23 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     6 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  24 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     6 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  25 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     9 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  26 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     6 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  27 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     6 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  28 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     9 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  29 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     6 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  30 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     9 TOTAL ITERATIONS
+
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FOR COMPONENT NO. 01<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+                                            -------------------------------------------
+                                                      TRANSPORT STEP NO.   30
+                                            -------------------------------------------
+
+ TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   10950.00    D   
+ .....................................................................
+
+                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP   30, TIME STEP    1, STRESS PERIOD    1
+                     ------------------------------------------------------------------------------------------
+
+                                                             IN                           OUT
+                                                      ----------------             ----------------
+                               CONSTANT CONCENTRATION:    0.000000                    0.000000    
+                                        CONSTANT HEAD:    0.000000                    0.000000    
+                                                WELLS:    0.000000                  -0.1800711E+13
+                                               DRAINS:    0.000000                  -0.8038561E+12
+                                               RIVERS:    0.000000                  -0.1283295E+14
+                                             RECHARGE:   0.4131133E+14                0.000000    
+                                MASS STORAGE (SOLUTE):    11547.27                  -0.2586283E+14
+                            ---------------------------------------------------------------------------
+                                              [TOTAL]:   0.4131133E+14 KG           -0.4130035E+14 KG  
+
+                                                          NET (IN - OUT):   0.1098488E+11
+                                                   DISCREPANCY (PERCENT):   0.2659402E-01
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  31 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     9 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  32 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  33 IN FLOW TIME STEP   1 STRESS PERIOD   1
      7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   8 IN FLOW TIME STEP   1 STRESS PERIOD   3
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  34 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     9 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  35 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  36 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  37 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  38 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  39 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  40 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FOR COMPONENT NO. 01<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+                                            -------------------------------------------
+                                                      TRANSPORT STEP NO.   40
+                                            -------------------------------------------
+
+ TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   14600.00    D   
+ .....................................................................
+
+                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP   40, TIME STEP    1, STRESS PERIOD    1
+                     ------------------------------------------------------------------------------------------
+
+                                                             IN                           OUT
+                                                      ----------------             ----------------
+                               CONSTANT CONCENTRATION:    0.000000                    0.000000    
+                                        CONSTANT HEAD:    0.000000                    0.000000    
+                                                WELLS:    0.000000                  -0.2758794E+13
+                                               DRAINS:    0.000000                  -0.1324201E+13
+                                               RIVERS:    0.000000                  -0.1953158E+14
+                                             RECHARGE:   0.5508178E+14                0.000000    
+                                MASS STORAGE (SOLUTE):    27645.53                  -0.3145486E+14
+                            ---------------------------------------------------------------------------
+                                              [TOTAL]:   0.5508178E+14 KG           -0.5506944E+14 KG  
+
+                                                          NET (IN - OUT):   0.1233964E+11
+                                                   DISCREPANCY (PERCENT):   0.2240491E-01
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  41 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  42 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     7 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  43 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     7 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  44 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     7 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  45 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  46 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  47 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     7 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  48 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     7 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  49 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  50 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     7 TOTAL ITERATIONS
+
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FOR COMPONENT NO. 01<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+                                            -------------------------------------------
+                                                      TRANSPORT STEP NO.   50
+                                            -------------------------------------------
+
+ TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   18250.00    D   
+ .....................................................................
+
+                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP   50, TIME STEP    1, STRESS PERIOD    1
+                     ------------------------------------------------------------------------------------------
+
+                                                             IN                           OUT
+                                                      ----------------             ----------------
+                               CONSTANT CONCENTRATION:    0.000000                    0.000000    
+                                        CONSTANT HEAD:    0.000000                    0.000000    
+                                                WELLS:    0.000000                  -0.3801246E+13
+                                               DRAINS:    0.000000                  -0.1945130E+13
+                                               RIVERS:    0.000000                  -0.2684157E+14
+                                             RECHARGE:   0.6885222E+14                0.000000    
+                                MASS STORAGE (SOLUTE):    52409.23                  -0.3625143E+14
+                            ---------------------------------------------------------------------------
+                                              [TOTAL]:   0.6885222E+14 KG           -0.6883938E+14 KG  
+
+                                                          NET (IN - OUT):   0.1284715E+11
+                                                   DISCREPANCY (PERCENT):   0.1866077E-01
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  51 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  52 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     7 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  53 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  54 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     7 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  55 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     6 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  56 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     2 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  57 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  58 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     2 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  59 IN FLOW TIME STEP   1 STRESS PERIOD   1
      5 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   9 IN FLOW TIME STEP   1 STRESS PERIOD   3
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  10 IN FLOW TIME STEP   1 STRESS PERIOD   3
-     7 TOTAL ITERATIONS
-  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
-  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
- ------------------------------------------------------------------------------------------------------------------------------------
-   0.4582E-01 (  5, 52, 16)  0.1834E-02 (  1,176,171)  0.3619E-02 (  1,176,171)  0.5156E-03 (  1,176,171)  0.1520E-04 (  1,176,171)
-   0.1764E-03 (  1,176,171)  0.6139E-05 (  3, 55, 25)
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  60 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     2 TOTAL ITERATIONS
 
 
 
@@ -585,134 +579,53 @@
 
 
                                             -------------------------------------------
-                                                      TRANSPORT STEP NO.   10
+                                                      TRANSPORT STEP NO.   60
                                             -------------------------------------------
 
- TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   7301.000    D   
+ TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   21900.00    D   
  .....................................................................
 
-                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP   10, TIME STEP    1, STRESS PERIOD    3
+                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP   60, TIME STEP    1, STRESS PERIOD    1
                      ------------------------------------------------------------------------------------------
 
                                                              IN                           OUT
                                                       ----------------             ----------------
                                CONSTANT CONCENTRATION:    0.000000                    0.000000    
                                         CONSTANT HEAD:    0.000000                    0.000000    
-                                                WELLS:    0.000000                  -0.9000388E+12
-                                               DRAINS:    0.000000                  -0.6053144E+12
-                                               RIVERS:    0.000000                  -0.3482941E+13
-                                             RECHARGE:   0.1815120E+14                0.000000    
-                                MASS STORAGE (SOLUTE):    15429.07                  -0.1314974E+14
+                                                WELLS:    0.000000                  -0.4903363E+13
+                                               DRAINS:    0.000000                  -0.2645428E+13
+                                               RIVERS:    0.000000                  -0.3460299E+14
+                                             RECHARGE:   0.8262263E+14                0.000000    
+                                MASS STORAGE (SOLUTE):    107117.3                  -0.4045685E+14
                             ---------------------------------------------------------------------------
-                                              [TOTAL]:   0.1815120E+14 KG           -0.1813804E+14 KG  
+                                              [TOTAL]:   0.8262263E+14 KG           -0.8260863E+14 KG  
 
-                                                          NET (IN - OUT):   0.1316173E+11
-                                                   DISCREPANCY (PERCENT):   0.7253791E-01
-
-
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                                                       STRESS PERIOD NO.  004
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
- LENGTH OF CURRENT STRESS PERIOD =   3650.000    
- NUMBER OF TIME STEPS FOR CURRENT STRESS PERIOD =    1
- TIME STEP MULTIPLIER USED IN FLOW SOLUTION =   1.000000    
-
- ***Type of Transport Simulation is TRANSIENT
-
- USER-SPECIFIED TRANSPORT STEPSIZE =   365.0000    D   
- MAXIMUM NUMBER OF TRANSPORT STEPS ALLOWED  IN ONE FLOW TIME STEP =     50000
- MULTIPLIER FOR SUCCESSIVE TRANSPORT STEPS  [USED IN IMPLICIT SCHEMES] =     1.000
- MAXIMUM TRANSPORT STEP SIZE  [USED IN IMPLICIT SCHEMES] =   365.0000    D   
-
- CONCENTRATION OF RECHARGE FLUXES WILL BE READ IN STRESS PERIOD  4
-
-                           RECH. CONC. COMP.  01    READ ON UNIT 34 USING FORMAT: "         (225E15.6) "
-                           -----------------------------------------------------------------------------
-
- NO. OF POINT SINKS/SOURCES OF SPECIFIED CONCONCENTRATIONS =    0 IN STRESS PERIOD  4
-
-
-                                          ================================================
-                                                         TIME STEP NO.  001
-                                          ================================================
-
- FROM TIME =   7301.0     TO    10951.    
-
-
-                    "THKSAT          " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  4 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QXX             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  4 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QYY             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  4 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QZZ             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  4 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "STO             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  4 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
- MAXIMUM STEPSIZE DURING WHICH ANY PARTICLE CANNOT MOVE MORE THAN ONE CELL
- =  1.332    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE ADVECTION TERM
- (FOR PURE FINITE-DIFFERENCE OPTION, MIXELM=0) 
- =  1.299    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
-                    "CNH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  4 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "WEL             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  4 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "DRN             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  4 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RCH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  4 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RIV             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  4 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-
- TOTAL NUMBER OF POINT SOURCES/SINKS PRESENT IN THE FLOW MODEL = 17060
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE SINK & SOURCE TERM
- =  1.305    (WHEN MIN. R.F.=1)  AT K=   1, I= 138, J= 219
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE DISPERSION TERM
- =  65.79    (WHEN MIN. R.F.=1)  AT K=   1, I= 179, J= 136
-
-
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   1 IN FLOW TIME STEP   1 STRESS PERIOD   4
-     9 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   2 IN FLOW TIME STEP   1 STRESS PERIOD   4
+                                                          NET (IN - OUT):   0.1400059E+11
+                                                   DISCREPANCY (PERCENT):   0.1694666E-01
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  61 IN FLOW TIME STEP   1 STRESS PERIOD   1
      8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   3 IN FLOW TIME STEP   1 STRESS PERIOD   4
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  62 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     2 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  63 IN FLOW TIME STEP   1 STRESS PERIOD   1
      8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   4 IN FLOW TIME STEP   1 STRESS PERIOD   4
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   5 IN FLOW TIME STEP   1 STRESS PERIOD   4
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   6 IN FLOW TIME STEP   1 STRESS PERIOD   4
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  64 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     2 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  65 IN FLOW TIME STEP   1 STRESS PERIOD   1
      8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   7 IN FLOW TIME STEP   1 STRESS PERIOD   4
-     9 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   8 IN FLOW TIME STEP   1 STRESS PERIOD   4
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  66 IN FLOW TIME STEP   1 STRESS PERIOD   1
      8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   9 IN FLOW TIME STEP   1 STRESS PERIOD   4
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  10 IN FLOW TIME STEP   1 STRESS PERIOD   4
-     8 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  67 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     5 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  68 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     2 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  69 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     4 TOTAL ITERATIONS
+     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  70 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     5 TOTAL ITERATIONS
   MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
   MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
  ------------------------------------------------------------------------------------------------------------------------------------
-   0.2791E-01 (  5,172,  2)  0.1713E-02 (  1,176,171)  0.2647E-02 (  1,176,171)  0.1089E-02 (  1,176,171)  0.9012E-04 (  1,176,171)
-   0.7594E-04 (  1,176,171)  0.4077E-04 (  1,176,171)  0.7153E-06 (  1,176,171)
+   0.9265E-02 (  4,205,210)  0.4698E-04 (  3, 51,158)  0.3975E-03 (  1, 50,118)  0.5619E-04 (  3, 51,158)  0.7412E-05 (  3,137,218)
 
 
 
@@ -720,974 +633,29 @@
 
 
                                             -------------------------------------------
-                                                      TRANSPORT STEP NO.   10
+                                                      TRANSPORT STEP NO.   70
                                             -------------------------------------------
 
- TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   10951.00    D   
+ TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   25550.00    D   
  .....................................................................
 
-                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP   10, TIME STEP    1, STRESS PERIOD    4
+                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP   70, TIME STEP    1, STRESS PERIOD    1
                      ------------------------------------------------------------------------------------------
 
                                                              IN                           OUT
                                                       ----------------             ----------------
                                CONSTANT CONCENTRATION:    0.000000                    0.000000    
                                         CONSTANT HEAD:    0.000000                    0.000000    
-                                                WELLS:    0.000000                  -0.2056906E+13
-                                               DRAINS:    0.000000                  -0.1196195E+13
-                                               RIVERS:    0.000000                  -0.7720915E+13
-                                             RECHARGE:   0.3280104E+14                0.000000    
-                                MASS STORAGE (SOLUTE):    25502.28                  -0.2180593E+14
+                                                WELLS:    0.000000                  -0.6049712E+13
+                                               DRAINS:    0.000000                  -0.3408218E+13
+                                               RIVERS:    0.000000                  -0.4271371E+14
+                                             RECHARGE:   0.9639303E+14                0.000000    
+                                MASS STORAGE (SOLUTE):    147863.2                  -0.4420645E+14
                             ---------------------------------------------------------------------------
-                                              [TOTAL]:   0.3280104E+14 KG           -0.3277995E+14 KG  
+                                              [TOTAL]:   0.9639303E+14 KG           -0.9637808E+14 KG  
 
-                                                          NET (IN - OUT):   0.2109106E+11
-                                                   DISCREPANCY (PERCENT):   0.6432064E-01
-
-
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                                                       STRESS PERIOD NO.  005
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
- LENGTH OF CURRENT STRESS PERIOD =   3650.000    
- NUMBER OF TIME STEPS FOR CURRENT STRESS PERIOD =    1
- TIME STEP MULTIPLIER USED IN FLOW SOLUTION =   1.000000    
-
- ***Type of Transport Simulation is TRANSIENT
-
- USER-SPECIFIED TRANSPORT STEPSIZE =   365.0000    D   
- MAXIMUM NUMBER OF TRANSPORT STEPS ALLOWED  IN ONE FLOW TIME STEP =     50000
- MULTIPLIER FOR SUCCESSIVE TRANSPORT STEPS  [USED IN IMPLICIT SCHEMES] =     1.000
- MAXIMUM TRANSPORT STEP SIZE  [USED IN IMPLICIT SCHEMES] =   365.0000    D   
-
- CONCENTRATION OF RECHARGE FLUXES WILL BE READ IN STRESS PERIOD  5
-
-                           RECH. CONC. COMP.  01    READ ON UNIT 34 USING FORMAT: "         (225E15.6) "
-                           -----------------------------------------------------------------------------
-
- NO. OF POINT SINKS/SOURCES OF SPECIFIED CONCONCENTRATIONS =    0 IN STRESS PERIOD  5
-
-
-                                          ================================================
-                                                         TIME STEP NO.  001
-                                          ================================================
-
- FROM TIME =   10951.     TO    14601.    
-
-
-                    "THKSAT          " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  5 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QXX             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  5 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QYY             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  5 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QZZ             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  5 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "STO             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  5 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
- MAXIMUM STEPSIZE DURING WHICH ANY PARTICLE CANNOT MOVE MORE THAN ONE CELL
- =  1.332    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE ADVECTION TERM
- (FOR PURE FINITE-DIFFERENCE OPTION, MIXELM=0) 
- =  1.299    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
-                    "CNH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  5 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "WEL             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  5 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "DRN             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  5 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RCH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  5 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RIV             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  5 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-
- TOTAL NUMBER OF POINT SOURCES/SINKS PRESENT IN THE FLOW MODEL = 17060
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE SINK & SOURCE TERM
- =  1.305    (WHEN MIN. R.F.=1)  AT K=   1, I= 138, J= 219
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE DISPERSION TERM
- =  65.79    (WHEN MIN. R.F.=1)  AT K=   1, I= 179, J= 136
-
-
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   1 IN FLOW TIME STEP   1 STRESS PERIOD   5
-     9 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   2 IN FLOW TIME STEP   1 STRESS PERIOD   5
-     9 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   3 IN FLOW TIME STEP   1 STRESS PERIOD   5
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   4 IN FLOW TIME STEP   1 STRESS PERIOD   5
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   5 IN FLOW TIME STEP   1 STRESS PERIOD   5
-     6 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   6 IN FLOW TIME STEP   1 STRESS PERIOD   5
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   7 IN FLOW TIME STEP   1 STRESS PERIOD   5
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   8 IN FLOW TIME STEP   1 STRESS PERIOD   5
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   9 IN FLOW TIME STEP   1 STRESS PERIOD   5
-     9 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  10 IN FLOW TIME STEP   1 STRESS PERIOD   5
-     6 TOTAL ITERATIONS
-  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
-  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
- ------------------------------------------------------------------------------------------------------------------------------------
-   0.1901E-01 (  5,176, 14)  0.1436E-02 (  1,176,171)  0.2373E-02 (  1,176,171)  0.3436E-02 (  1,176,171)  0.8100E-04 (  1,176,171)
-   0.5662E-05 (  1,106,149)
-
-
-
- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FOR COMPONENT NO. 01<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-
-                                            -------------------------------------------
-                                                      TRANSPORT STEP NO.   10
-                                            -------------------------------------------
-
- TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   14601.00    D   
- .....................................................................
-
-                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP   10, TIME STEP    1, STRESS PERIOD    5
-                     ------------------------------------------------------------------------------------------
-
-                                                             IN                           OUT
-                                                      ----------------             ----------------
-                               CONSTANT CONCENTRATION:    0.000000                    0.000000    
-                                        CONSTANT HEAD:    0.000000                    0.000000    
-                                                WELLS:    0.000000                  -0.3599473E+13
-                                               DRAINS:    0.000000                  -0.1959474E+13
-                                               RIVERS:    0.000000                  -0.1340695E+14
-                                             RECHARGE:   0.4947735E+14                0.000000    
-                                MASS STORAGE (SOLUTE):    41549.35                  -0.3048352E+14
-                            ---------------------------------------------------------------------------
-                                              [TOTAL]:   0.4947735E+14 KG           -0.4944941E+14 KG  
-
-                                                          NET (IN - OUT):   0.2793826E+11
-                                                   DISCREPANCY (PERCENT):   0.5648272E-01
-
-
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                                                       STRESS PERIOD NO.  006
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
- LENGTH OF CURRENT STRESS PERIOD =   3650.000    
- NUMBER OF TIME STEPS FOR CURRENT STRESS PERIOD =    1
- TIME STEP MULTIPLIER USED IN FLOW SOLUTION =   1.000000    
-
- ***Type of Transport Simulation is TRANSIENT
-
- USER-SPECIFIED TRANSPORT STEPSIZE =   365.0000    D   
- MAXIMUM NUMBER OF TRANSPORT STEPS ALLOWED  IN ONE FLOW TIME STEP =     50000
- MULTIPLIER FOR SUCCESSIVE TRANSPORT STEPS  [USED IN IMPLICIT SCHEMES] =     1.000
- MAXIMUM TRANSPORT STEP SIZE  [USED IN IMPLICIT SCHEMES] =   365.0000    D   
-
- CONCENTRATION OF RECHARGE FLUXES WILL BE READ IN STRESS PERIOD  6
-
-                           RECH. CONC. COMP.  01    READ ON UNIT 34 USING FORMAT: "         (225E15.6) "
-                           -----------------------------------------------------------------------------
-
- NO. OF POINT SINKS/SOURCES OF SPECIFIED CONCONCENTRATIONS =    0 IN STRESS PERIOD  6
-
-
-                                          ================================================
-                                                         TIME STEP NO.  001
-                                          ================================================
-
- FROM TIME =   14601.     TO    18251.    
-
-
-                    "THKSAT          " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  6 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QXX             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  6 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QYY             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  6 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QZZ             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  6 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "STO             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  6 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
- MAXIMUM STEPSIZE DURING WHICH ANY PARTICLE CANNOT MOVE MORE THAN ONE CELL
- =  1.332    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE ADVECTION TERM
- (FOR PURE FINITE-DIFFERENCE OPTION, MIXELM=0) 
- =  1.299    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
-                    "CNH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  6 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "WEL             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  6 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "DRN             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  6 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RCH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  6 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RIV             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  6 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-
- TOTAL NUMBER OF POINT SOURCES/SINKS PRESENT IN THE FLOW MODEL = 17060
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE SINK & SOURCE TERM
- =  1.305    (WHEN MIN. R.F.=1)  AT K=   1, I= 138, J= 219
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE DISPERSION TERM
- =  65.79    (WHEN MIN. R.F.=1)  AT K=   1, I= 179, J= 136
-
-
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   1 IN FLOW TIME STEP   1 STRESS PERIOD   6
-     9 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   2 IN FLOW TIME STEP   1 STRESS PERIOD   6
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   3 IN FLOW TIME STEP   1 STRESS PERIOD   6
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   4 IN FLOW TIME STEP   1 STRESS PERIOD   6
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   5 IN FLOW TIME STEP   1 STRESS PERIOD   6
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   6 IN FLOW TIME STEP   1 STRESS PERIOD   6
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   7 IN FLOW TIME STEP   1 STRESS PERIOD   6
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   8 IN FLOW TIME STEP   1 STRESS PERIOD   6
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   9 IN FLOW TIME STEP   1 STRESS PERIOD   6
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  10 IN FLOW TIME STEP   1 STRESS PERIOD   6
-     9 TOTAL ITERATIONS
-  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
-  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
- ------------------------------------------------------------------------------------------------------------------------------------
-   0.1449E-01 (  3,203,117)  0.1118E-02 (  1,176,171)  0.2830E-01 (  1,106,149)  0.2737E-01 (  1,106,149)  0.6545E-04 (  1,106,149)
-   0.1073E-04 (  1,106,149)  0.2849E-04 (  1,106,149)  0.1740E-04 (  1,106,149)  0.8345E-06 (  1,106,149)
-
-
-
- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FOR COMPONENT NO. 01<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-
-                                            -------------------------------------------
-                                                      TRANSPORT STEP NO.   10
-                                            -------------------------------------------
-
- TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   18251.00    D   
- .....................................................................
-
-                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP   10, TIME STEP    1, STRESS PERIOD    6
-                     ------------------------------------------------------------------------------------------
-
-                                                             IN                           OUT
-                                                      ----------------             ----------------
-                               CONSTANT CONCENTRATION:    0.000000                    0.000000    
-                                        CONSTANT HEAD:    0.000000                    0.000000    
-                                                WELLS:    0.000000                  -0.5490341E+13
-                                               DRAINS:    0.000000                  -0.2906999E+13
-                                               RIVERS:    0.000000                  -0.2044405E+14
-                                             RECHARGE:   0.6818399E+14                0.000000    
-                                MASS STORAGE (SOLUTE):    67738.15                  -0.3930520E+14
-                            ---------------------------------------------------------------------------
-                                              [TOTAL]:   0.6818399E+14 KG           -0.6814659E+14 KG  
-
-                                                          NET (IN - OUT):   0.3739222E+11
-                                                   DISCREPANCY (PERCENT):   0.5485522E-01
-
-
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                                                       STRESS PERIOD NO.  007
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
- LENGTH OF CURRENT STRESS PERIOD =   3650.000    
- NUMBER OF TIME STEPS FOR CURRENT STRESS PERIOD =    1
- TIME STEP MULTIPLIER USED IN FLOW SOLUTION =   1.000000    
-
- ***Type of Transport Simulation is TRANSIENT
-
- USER-SPECIFIED TRANSPORT STEPSIZE =   365.0000    D   
- MAXIMUM NUMBER OF TRANSPORT STEPS ALLOWED  IN ONE FLOW TIME STEP =     50000
- MULTIPLIER FOR SUCCESSIVE TRANSPORT STEPS  [USED IN IMPLICIT SCHEMES] =     1.000
- MAXIMUM TRANSPORT STEP SIZE  [USED IN IMPLICIT SCHEMES] =   365.0000    D   
-
- CONCENTRATION OF RECHARGE FLUXES WILL BE READ IN STRESS PERIOD  7
-
-                           RECH. CONC. COMP.  01    READ ON UNIT 34 USING FORMAT: "         (225E15.6) "
-                           -----------------------------------------------------------------------------
-
- NO. OF POINT SINKS/SOURCES OF SPECIFIED CONCONCENTRATIONS =    0 IN STRESS PERIOD  7
-
-
-                                          ================================================
-                                                         TIME STEP NO.  001
-                                          ================================================
-
- FROM TIME =   18251.     TO    21901.    
-
-
-                    "THKSAT          " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  7 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QXX             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  7 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QYY             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  7 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QZZ             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  7 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "STO             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  7 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
- MAXIMUM STEPSIZE DURING WHICH ANY PARTICLE CANNOT MOVE MORE THAN ONE CELL
- =  1.332    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE ADVECTION TERM
- (FOR PURE FINITE-DIFFERENCE OPTION, MIXELM=0) 
- =  1.299    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
-                    "CNH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  7 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "WEL             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  7 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "DRN             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  7 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RCH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  7 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RIV             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  7 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-
- TOTAL NUMBER OF POINT SOURCES/SINKS PRESENT IN THE FLOW MODEL = 17060
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE SINK & SOURCE TERM
- =  1.305    (WHEN MIN. R.F.=1)  AT K=   1, I= 138, J= 219
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE DISPERSION TERM
- =  65.79    (WHEN MIN. R.F.=1)  AT K=   1, I= 179, J= 136
-
-
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   1 IN FLOW TIME STEP   1 STRESS PERIOD   7
-     9 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   2 IN FLOW TIME STEP   1 STRESS PERIOD   7
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   3 IN FLOW TIME STEP   1 STRESS PERIOD   7
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   4 IN FLOW TIME STEP   1 STRESS PERIOD   7
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   5 IN FLOW TIME STEP   1 STRESS PERIOD   7
-     6 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   6 IN FLOW TIME STEP   1 STRESS PERIOD   7
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   7 IN FLOW TIME STEP   1 STRESS PERIOD   7
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   8 IN FLOW TIME STEP   1 STRESS PERIOD   7
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   9 IN FLOW TIME STEP   1 STRESS PERIOD   7
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  10 IN FLOW TIME STEP   1 STRESS PERIOD   7
-     8 TOTAL ITERATIONS
-  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
-  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
- ------------------------------------------------------------------------------------------------------------------------------------
-   0.1227E-01 (  3,199,221)  0.8722E-03 (  1,176,171)  0.1803E-02 (  1,106,149)  0.1000E-02 (  1,106,149)  0.3988E-04 (  1,106,149)
-   0.1278E-03 (  1,106,149)  0.1453E-03 (  1,106,149)  0.8345E-06 (  1,106,149)
-
-
-
- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FOR COMPONENT NO. 01<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-
-                                            -------------------------------------------
-                                                      TRANSPORT STEP NO.   10
-                                            -------------------------------------------
-
- TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   21901.00    D   
- .....................................................................
-
-                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP   10, TIME STEP    1, STRESS PERIOD    7
-                     ------------------------------------------------------------------------------------------
-
-                                                             IN                           OUT
-                                                      ----------------             ----------------
-                               CONSTANT CONCENTRATION:    0.000000                    0.000000    
-                                        CONSTANT HEAD:    0.000000                    0.000000    
-                                                WELLS:    0.000000                  -0.7713430E+13
-                                               DRAINS:    0.000000                  -0.4046077E+13
-                                               RIVERS:    0.000000                  -0.2878244E+14
-                                             RECHARGE:   0.8892129E+14                0.000000    
-                                MASS STORAGE (SOLUTE):    88619.60                  -0.4832955E+14
-                            ---------------------------------------------------------------------------
-                                              [TOTAL]:   0.8892129E+14 KG           -0.8887150E+14 KG  
-
-                                                          NET (IN - OUT):   0.4979478E+11
-                                                   DISCREPANCY (PERCENT):   0.5601440E-01
-
-
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                                                       STRESS PERIOD NO.  008
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
- LENGTH OF CURRENT STRESS PERIOD =   3650.000    
- NUMBER OF TIME STEPS FOR CURRENT STRESS PERIOD =    1
- TIME STEP MULTIPLIER USED IN FLOW SOLUTION =   1.000000    
-
- ***Type of Transport Simulation is TRANSIENT
-
- USER-SPECIFIED TRANSPORT STEPSIZE =   365.0000    D   
- MAXIMUM NUMBER OF TRANSPORT STEPS ALLOWED  IN ONE FLOW TIME STEP =     50000
- MULTIPLIER FOR SUCCESSIVE TRANSPORT STEPS  [USED IN IMPLICIT SCHEMES] =     1.000
- MAXIMUM TRANSPORT STEP SIZE  [USED IN IMPLICIT SCHEMES] =   365.0000    D   
-
- CONCENTRATION OF RECHARGE FLUXES WILL BE READ IN STRESS PERIOD  8
-
-                           RECH. CONC. COMP.  01    READ ON UNIT 34 USING FORMAT: "         (225E15.6) "
-                           -----------------------------------------------------------------------------
-
- NO. OF POINT SINKS/SOURCES OF SPECIFIED CONCONCENTRATIONS =    0 IN STRESS PERIOD  8
-
-
-                                          ================================================
-                                                         TIME STEP NO.  001
-                                          ================================================
-
- FROM TIME =   21901.     TO    25551.    
-
-
-                    "THKSAT          " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  8 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QXX             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  8 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QYY             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  8 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QZZ             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  8 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "STO             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  8 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
- MAXIMUM STEPSIZE DURING WHICH ANY PARTICLE CANNOT MOVE MORE THAN ONE CELL
- =  1.332    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE ADVECTION TERM
- (FOR PURE FINITE-DIFFERENCE OPTION, MIXELM=0) 
- =  1.299    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
-                    "CNH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  8 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "WEL             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  8 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "DRN             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  8 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RCH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  8 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RIV             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  8 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-
- TOTAL NUMBER OF POINT SOURCES/SINKS PRESENT IN THE FLOW MODEL = 17060
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE SINK & SOURCE TERM
- =  1.305    (WHEN MIN. R.F.=1)  AT K=   1, I= 138, J= 219
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE DISPERSION TERM
- =  65.79    (WHEN MIN. R.F.=1)  AT K=   1, I= 179, J= 136
-
-
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   1 IN FLOW TIME STEP   1 STRESS PERIOD   8
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   2 IN FLOW TIME STEP   1 STRESS PERIOD   8
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   3 IN FLOW TIME STEP   1 STRESS PERIOD   8
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   4 IN FLOW TIME STEP   1 STRESS PERIOD   8
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   5 IN FLOW TIME STEP   1 STRESS PERIOD   8
-     6 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   6 IN FLOW TIME STEP   1 STRESS PERIOD   8
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   7 IN FLOW TIME STEP   1 STRESS PERIOD   8
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   8 IN FLOW TIME STEP   1 STRESS PERIOD   8
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   9 IN FLOW TIME STEP   1 STRESS PERIOD   8
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  10 IN FLOW TIME STEP   1 STRESS PERIOD   8
-     7 TOTAL ITERATIONS
-  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
-  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
- ------------------------------------------------------------------------------------------------------------------------------------
-   0.1070E-01 (  3,199,222)  0.7511E-03 (  1,176,171)  0.1439E-02 (  1,176,171)  0.7939E-03 (  1,176,171)  0.3159E-04 (  1,176,171)
-   0.1127E-04 (  1,106,149)  0.6080E-05 (  1,106,149)
-
-
-
- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FOR COMPONENT NO. 01<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-
-                                            -------------------------------------------
-                                                      TRANSPORT STEP NO.   10
-                                            -------------------------------------------
-
- TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   25551.00    D   
- .....................................................................
-
-                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP   10, TIME STEP    1, STRESS PERIOD    8
-                     ------------------------------------------------------------------------------------------
-
-                                                             IN                           OUT
-                                                      ----------------             ----------------
-                               CONSTANT CONCENTRATION:    0.000000                    0.000000    
-                                        CONSTANT HEAD:    0.000000                    0.000000    
-                                                WELLS:    0.000000                  -0.1026148E+14
-                                               DRAINS:    0.000000                  -0.5379405E+13
-                                               RIVERS:    0.000000                  -0.3839339E+14
-                                             RECHARGE:   0.1116860E+15                0.000000    
-                                MASS STORAGE (SOLUTE):    112486.3                  -0.5758997E+14
-                            ---------------------------------------------------------------------------
-                                              [TOTAL]:   0.1116860E+15 KG           -0.1116242E+15 KG  
-
-                                                          NET (IN - OUT):   0.6172338E+11
-                                                   DISCREPANCY (PERCENT):   0.5528039E-01
-
-
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                                                       STRESS PERIOD NO.  009
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
- LENGTH OF CURRENT STRESS PERIOD =   3650.000    
- NUMBER OF TIME STEPS FOR CURRENT STRESS PERIOD =    1
- TIME STEP MULTIPLIER USED IN FLOW SOLUTION =   1.000000    
-
- ***Type of Transport Simulation is TRANSIENT
-
- USER-SPECIFIED TRANSPORT STEPSIZE =   365.0000    D   
- MAXIMUM NUMBER OF TRANSPORT STEPS ALLOWED  IN ONE FLOW TIME STEP =     50000
- MULTIPLIER FOR SUCCESSIVE TRANSPORT STEPS  [USED IN IMPLICIT SCHEMES] =     1.000
- MAXIMUM TRANSPORT STEP SIZE  [USED IN IMPLICIT SCHEMES] =   365.0000    D   
-
- CONCENTRATION OF RECHARGE FLUXES WILL BE READ IN STRESS PERIOD  9
-
-                           RECH. CONC. COMP.  01    READ ON UNIT 34 USING FORMAT: "         (225E15.6) "
-                           -----------------------------------------------------------------------------
-
- NO. OF POINT SINKS/SOURCES OF SPECIFIED CONCONCENTRATIONS =    0 IN STRESS PERIOD  9
-
-
-                                          ================================================
-                                                         TIME STEP NO.  001
-                                          ================================================
-
- FROM TIME =   25551.     TO    29201.    
-
-
-                    "THKSAT          " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  9 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QXX             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  9 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QYY             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  9 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QZZ             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  9 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "STO             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  9 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
- MAXIMUM STEPSIZE DURING WHICH ANY PARTICLE CANNOT MOVE MORE THAN ONE CELL
- =  1.332    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE ADVECTION TERM
- (FOR PURE FINITE-DIFFERENCE OPTION, MIXELM=0) 
- =  1.299    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
-                    "CNH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  9 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "WEL             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  9 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "DRN             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  9 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RCH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  9 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RIV             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  9 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-
- TOTAL NUMBER OF POINT SOURCES/SINKS PRESENT IN THE FLOW MODEL = 17060
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE SINK & SOURCE TERM
- =  1.305    (WHEN MIN. R.F.=1)  AT K=   1, I= 138, J= 219
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE DISPERSION TERM
- =  65.79    (WHEN MIN. R.F.=1)  AT K=   1, I= 179, J= 136
-
-
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   1 IN FLOW TIME STEP   1 STRESS PERIOD   9
-    10 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   2 IN FLOW TIME STEP   1 STRESS PERIOD   9
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   3 IN FLOW TIME STEP   1 STRESS PERIOD   9
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   4 IN FLOW TIME STEP   1 STRESS PERIOD   9
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   5 IN FLOW TIME STEP   1 STRESS PERIOD   9
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   6 IN FLOW TIME STEP   1 STRESS PERIOD   9
-     6 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   7 IN FLOW TIME STEP   1 STRESS PERIOD   9
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   8 IN FLOW TIME STEP   1 STRESS PERIOD   9
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   9 IN FLOW TIME STEP   1 STRESS PERIOD   9
-     6 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  10 IN FLOW TIME STEP   1 STRESS PERIOD   9
-     9 TOTAL ITERATIONS
-  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
-  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
- ------------------------------------------------------------------------------------------------------------------------------------
-   0.2254E-01 (  5, 52, 16)  0.1305E-02 (  3, 34, 36)  0.7786E-01 (  3, 46, 27)  0.7852E-01 (  3, 46, 27)  0.1578E-02 (  3, 46, 27)
-   0.1657E-02 (  3, 46, 27)  0.2125E-03 (  3, 46, 27)  0.2201E-03 (  3, 46, 27)  0.6855E-05 (  3, 46, 27)
-
-
-
- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FOR COMPONENT NO. 01<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-
-                                            -------------------------------------------
-                                                      TRANSPORT STEP NO.   10
-                                            -------------------------------------------
-
- TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   29201.00    D   
- .....................................................................
-
-                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP   10, TIME STEP    1, STRESS PERIOD    9
-                     ------------------------------------------------------------------------------------------
-
-                                                             IN                           OUT
-                                                      ----------------             ----------------
-                               CONSTANT CONCENTRATION:    0.000000                    0.000000    
-                                        CONSTANT HEAD:    0.000000                    0.000000    
-                                                WELLS:    0.000000                  -0.1276006E+14
-                                               DRAINS:    0.000000                  -0.6638992E+13
-                                               RIVERS:    0.000000                  -0.4783451E+14
-                                             RECHARGE:   0.1273529E+15                0.000000    
-                                MASS STORAGE (SOLUTE):   0.2597889E+13              -0.6264787E+14
-                            ---------------------------------------------------------------------------
-                                              [TOTAL]:   0.1299508E+15 KG           -0.1298814E+15 KG  
-
-                                                          NET (IN - OUT):   0.6931507E+11
-                                                   DISCREPANCY (PERCENT):   0.5335372E-01
-
-
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                                                       STRESS PERIOD NO.  010
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
- LENGTH OF CURRENT STRESS PERIOD =   3650.000    
- NUMBER OF TIME STEPS FOR CURRENT STRESS PERIOD =    1
- TIME STEP MULTIPLIER USED IN FLOW SOLUTION =   1.000000    
-
- ***Type of Transport Simulation is TRANSIENT
-
- USER-SPECIFIED TRANSPORT STEPSIZE =   365.0000    D   
- MAXIMUM NUMBER OF TRANSPORT STEPS ALLOWED  IN ONE FLOW TIME STEP =     50000
- MULTIPLIER FOR SUCCESSIVE TRANSPORT STEPS  [USED IN IMPLICIT SCHEMES] =     1.000
- MAXIMUM TRANSPORT STEP SIZE  [USED IN IMPLICIT SCHEMES] =   365.0000    D   
-
- CONCENTRATION OF RECHARGE FLUXES WILL BE READ IN STRESS PERIOD 10
-
-                           RECH. CONC. COMP.  01    READ ON UNIT 34 USING FORMAT: "         (225E15.6) "
-                           -----------------------------------------------------------------------------
-
- NO. OF POINT SINKS/SOURCES OF SPECIFIED CONCONCENTRATIONS =    0 IN STRESS PERIOD 10
-
-
-                                          ================================================
-                                                         TIME STEP NO.  001
-                                          ================================================
-
- FROM TIME =   29201.     TO    32851.    
-
-
-                    "THKSAT          " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 10 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QXX             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 10 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QYY             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 10 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QZZ             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 10 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "STO             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 10 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
- MAXIMUM STEPSIZE DURING WHICH ANY PARTICLE CANNOT MOVE MORE THAN ONE CELL
- =  1.332    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE ADVECTION TERM
- (FOR PURE FINITE-DIFFERENCE OPTION, MIXELM=0) 
- =  1.299    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
-                    "CNH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 10 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "WEL             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 10 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "DRN             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 10 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RCH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 10 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RIV             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 10 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-
- TOTAL NUMBER OF POINT SOURCES/SINKS PRESENT IN THE FLOW MODEL = 17060
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE SINK & SOURCE TERM
- =  1.305    (WHEN MIN. R.F.=1)  AT K=   1, I= 138, J= 219
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE DISPERSION TERM
- =  65.79    (WHEN MIN. R.F.=1)  AT K=   1, I= 179, J= 136
-
-
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   1 IN FLOW TIME STEP   1 STRESS PERIOD  10
-    12 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   2 IN FLOW TIME STEP   1 STRESS PERIOD  10
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   3 IN FLOW TIME STEP   1 STRESS PERIOD  10
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   4 IN FLOW TIME STEP   1 STRESS PERIOD  10
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   5 IN FLOW TIME STEP   1 STRESS PERIOD  10
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   6 IN FLOW TIME STEP   1 STRESS PERIOD  10
-     6 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   7 IN FLOW TIME STEP   1 STRESS PERIOD  10
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   8 IN FLOW TIME STEP   1 STRESS PERIOD  10
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   9 IN FLOW TIME STEP   1 STRESS PERIOD  10
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  10 IN FLOW TIME STEP   1 STRESS PERIOD  10
-     7 TOTAL ITERATIONS
-  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
-  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
- ------------------------------------------------------------------------------------------------------------------------------------
-   0.2629E-01 (  5, 52, 16)  0.6976E-03 (  1,176,171)  0.1940E-02 (  1,176,171)  0.3859E-03 (  1,176,171)  0.1678E-03 (  3, 55, 25)
-   0.1979E-04 (  3, 55, 25)  0.5305E-05 (  1,176,171)
-
-
-
- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FOR COMPONENT NO. 01<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-
-                                            -------------------------------------------
-                                                      TRANSPORT STEP NO.   10
-                                            -------------------------------------------
-
- TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   32851.00    D   
- .....................................................................
-
-                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP   10, TIME STEP    1, STRESS PERIOD   10
-                     ------------------------------------------------------------------------------------------
-
-                                                             IN                           OUT
-                                                      ----------------             ----------------
-                               CONSTANT CONCENTRATION:    0.000000                    0.000000    
-                                        CONSTANT HEAD:    0.000000                    0.000000    
-                                                WELLS:    0.000000                  -0.1494630E+14
-                                               DRAINS:    0.000000                  -0.7810006E+13
-                                               RIVERS:    0.000000                  -0.5632824E+14
-                                             RECHARGE:   0.1379501E+15                0.000000    
-                                MASS STORAGE (SOLUTE):   0.7363004E+13              -0.6615321E+14
-                            ---------------------------------------------------------------------------
-                                              [TOTAL]:   0.1453131E+15 KG           -0.1452378E+15 KG  
-
-                                                          NET (IN - OUT):   0.7534648E+11
-                                                   DISCREPANCY (PERCENT):   0.5186457E-01
-
-
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                                                       STRESS PERIOD NO.  011
-                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
- LENGTH OF CURRENT STRESS PERIOD =   3650.000    
- NUMBER OF TIME STEPS FOR CURRENT STRESS PERIOD =    1
- TIME STEP MULTIPLIER USED IN FLOW SOLUTION =   1.000000    
-
- ***Type of Transport Simulation is TRANSIENT
-
- USER-SPECIFIED TRANSPORT STEPSIZE =   365.0000    D   
- MAXIMUM NUMBER OF TRANSPORT STEPS ALLOWED  IN ONE FLOW TIME STEP =     50000
- MULTIPLIER FOR SUCCESSIVE TRANSPORT STEPS  [USED IN IMPLICIT SCHEMES] =     1.000
- MAXIMUM TRANSPORT STEP SIZE  [USED IN IMPLICIT SCHEMES] =   365.0000    D   
-
- CONCENTRATION OF RECHARGE FLUXES WILL BE READ IN STRESS PERIOD 11
-
-                           RECH. CONC. COMP.  01    READ ON UNIT 34 USING FORMAT: "         (225E15.6) "
-                           -----------------------------------------------------------------------------
-
- NO. OF POINT SINKS/SOURCES OF SPECIFIED CONCONCENTRATIONS =    0 IN STRESS PERIOD 11
-
-
-                                          ================================================
-                                                         TIME STEP NO.  001
-                                          ================================================
-
- FROM TIME =   32851.     TO    36501.    
-
-
-                    "THKSAT          " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 11 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QXX             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 11 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QYY             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 11 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "QZZ             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 11 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "STO             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 11 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
- MAXIMUM STEPSIZE DURING WHICH ANY PARTICLE CANNOT MOVE MORE THAN ONE CELL
- =  1.332    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE ADVECTION TERM
- (FOR PURE FINITE-DIFFERENCE OPTION, MIXELM=0) 
- =  1.299    (WHEN MIN. R.F.=1)  AT K=   2, I= 179, J= 136
-
-                    "CNH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 11 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "WEL             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 11 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "DRN             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 11 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RCH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 11 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-                    "RIV             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD 11 READ UNFORMATTED ON UNIT 10
-                    --------------------------------------------------------------------------------------------
-
-
- TOTAL NUMBER OF POINT SOURCES/SINKS PRESENT IN THE FLOW MODEL = 17060
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE SINK & SOURCE TERM
- =  1.305    (WHEN MIN. R.F.=1)  AT K=   1, I= 138, J= 219
-
- MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE DISPERSION TERM
- =  65.79    (WHEN MIN. R.F.=1)  AT K=   1, I= 179, J= 136
-
-
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   1 IN FLOW TIME STEP   1 STRESS PERIOD  11
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   2 IN FLOW TIME STEP   1 STRESS PERIOD  11
-     8 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   3 IN FLOW TIME STEP   1 STRESS PERIOD  11
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   4 IN FLOW TIME STEP   1 STRESS PERIOD  11
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   5 IN FLOW TIME STEP   1 STRESS PERIOD  11
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   6 IN FLOW TIME STEP   1 STRESS PERIOD  11
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   7 IN FLOW TIME STEP   1 STRESS PERIOD  11
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   8 IN FLOW TIME STEP   1 STRESS PERIOD  11
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   9 IN FLOW TIME STEP   1 STRESS PERIOD  11
-     7 TOTAL ITERATIONS
-     1 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  10 IN FLOW TIME STEP   1 STRESS PERIOD  11
-     8 TOTAL ITERATIONS
-  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
-  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
- ------------------------------------------------------------------------------------------------------------------------------------
-   0.1796E-01 (  5,172,  2)  0.7225E-03 (  1,176,171)  0.8784E-03 (  1,176,171)  0.5215E-04 (  3, 55, 25)  0.4321E-04 (  1, 64,173)
-   0.1962E-04 (  7,199,164)  0.1350E-04 (  7,199,164)  0.6557E-06 (  1, 57, 27)
-
-
-
- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FOR COMPONENT NO. 01<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-
-                                            -------------------------------------------
-                                                      TRANSPORT STEP NO.   10
-                                            -------------------------------------------
-
- TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   36501.00    D   
- .....................................................................
-
-                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP   10, TIME STEP    1, STRESS PERIOD   11
-                     ------------------------------------------------------------------------------------------
-
-                                                             IN                           OUT
-                                                      ----------------             ----------------
-                               CONSTANT CONCENTRATION:    0.000000                    0.000000    
-                                        CONSTANT HEAD:    0.000000                    0.000000    
-                                                WELLS:    0.000000                  -0.1690577E+14
-                                               DRAINS:    0.000000                  -0.8990307E+13
-                                               RIVERS:    0.000000                  -0.6416794E+14
-                                             RECHARGE:   0.1485474E+15                0.000000    
-                                MASS STORAGE (SOLUTE):   0.1051629E+14              -0.6891895E+14
-                            ---------------------------------------------------------------------------
-                                              [TOTAL]:   0.1590637E+15 KG           -0.1589830E+15 KG  
-
-                                                          NET (IN - OUT):   0.8074874E+11
-                                                   DISCREPANCY (PERCENT):   0.5077792E-01
+                                                          NET (IN - OUT):   0.1495689E+11
+                                                   DISCREPANCY (PERCENT):   0.1551777E-01
   ----- 
  | M T |
  | 3 D | END OF MODEL OUTPUT
